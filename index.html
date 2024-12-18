@@ -7,12 +7,15 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #ff4d6d;
             color: #333;
             margin: 0;
             min-height: 100vh;
@@ -25,6 +28,8 @@
         .navbar-brand {
             font-weight: 700;
             color: #fff !important;
+            font-size: 1.8rem;
+            text-transform: uppercase;
         }
         .nav-link {
             color: #fff !important;
@@ -32,19 +37,26 @@
         }
         .hero-section {
             text-align: center;
-            padding: 40px 10px;
+            padding: 60px 20px;
+            background-color: #ff4d6d;
+            color: white;
+            font-family: 'Satisfy', cursive;
         }
         .hero-section h1 {
             font-weight: 700;
-            color: #333;
+            font-size: 2.5rem;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 10px 0;
         }
         .form-container {
             background: #fff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             margin: 30px auto;
-            max-width: 500px;
+            max-width: 600px;
             flex: 1;
         }
         .form-container h2 {
@@ -52,6 +64,7 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 20px;
+            font-size: 1.8rem;
         }
         .btn-custom {
             background-color: #ff4d6d;
@@ -59,7 +72,9 @@
             font-weight: 600;
             border: none;
             border-radius: 25px;
-            padding: 10px 0;
+            padding: 12px 0;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
         }
         .btn-custom:hover {
             background-color: #ff3366;
@@ -71,12 +86,13 @@
             text-align: center;
             display: block;
             margin-top: 10px;
+            font-size: 1.1rem;
         }
         .footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             padding: 15px 0;
             position: relative;
         }
@@ -85,6 +101,16 @@
             bottom: 0;
             left: 0;
             width: 100%;
+        }
+        .hero-section img {
+            width: 100%;
+            max-width: 250px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .form-control, .form-select {
+            border-radius: 10px;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -99,8 +125,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <h1>Find Your Perfect Match</h1>
-        <p>Connect, explore, and make meaningful relationships with CollegeCupid!</p>
-        <img src="bg.png" height="150px" width="250px">
+        <p>Connect over a coffee!</p>
+        <img src="bg.png" alt="Hero Image">
     </section>
 
     <!-- Form Section -->
