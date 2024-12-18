@@ -15,6 +15,9 @@
             background-color: #f9f9f9;
             color: #333;
             margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .navbar {
             background-color: #ff4d6d;
@@ -42,6 +45,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin: 30px auto;
             max-width: 500px;
+            flex: 1;
         }
         .form-container h2 {
             color: #ff4d6d;
@@ -74,6 +78,13 @@
             text-align: center;
             font-size: 0.8rem;
             padding: 15px 0;
+            position: relative;
+        }
+        #login-panel + .footer.fixed-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -151,14 +162,11 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <p>&copy; 2024 CollegeCupid. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <!-- Audio Element -->
-    <audio id="background-song" src="your-audio-file.mp3"></audio>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -168,17 +176,16 @@
         function toggleForm() {
             const loginPanel = document.getElementById('login-panel');
             const registerPanel = document.getElementById('register-panel');
-            const audio = document.getElementById('background-song');
+            const footer = document.getElementById('footer');
 
             if (loginPanel.style.display === 'none') {
                 loginPanel.style.display = 'block';
                 registerPanel.style.display = 'none';
-                audio.pause(); // Stop the song
-                audio.currentTime = 0; // Reset song
+                footer.classList.add('fixed-bottom');
             } else {
                 loginPanel.style.display = 'none';
                 registerPanel.style.display = 'block';
-                audio.play(); // Play the song
+                footer.classList.remove('fixed-bottom');
             }
         }
     </script>
