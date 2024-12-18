@@ -24,6 +24,11 @@
         }
         .navbar {
             background-color: #ff4d6d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to distinguish it from the section */
+            z-index: 1000; /* Ensures the navbar stays above other content */
+            position: sticky; /* Keeps the navbar at the top while scrolling */
+            top: 0;
+            width: 100%;
         }
         .navbar-brand {
             font-weight: 700;
