@@ -96,6 +96,46 @@
         .image-container img {
             max-width: 50%; /* Ensures the image doesn't overflow its container */ /* Maintains the aspect ratio */
         }
+        
+Here’s the code snippet for the fixed feedback button:
+
+html
+Copy code
+<!-- Feedback Button Styles -->
+<style>
+    #feedbackBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ff4d6d;
+        color: #fff;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        z-index: 9999;
+    }
+
+    #feedbackBtn:hover {
+        background-color: #ff3366;
+        transform: scale(1.1);
+    }
+
+    /* Icon inside the button */
+    #feedbackBtn i {
+        font-size: 1.2rem;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        #feedbackBtn {
+            bottom: 15px;
+            right: 15px;
+            padding: 12px 15px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -156,6 +196,9 @@
             <a href="edit_profile.php" class="btn btn-custom">Edit Profile</a>
             <a href="profile.php" class="btn btn-custom">Mutual Likes</a>
         </div>
+        <button id="feedbackBtn" class="btn btn-feedback" onclick="window.location.href='feedback.php';">
+    <i class="bi bi-pencil"></i> Feedback
+</button>
     </div>
 
     <!-- Footer -->
